@@ -7,6 +7,17 @@
 
 URL:
 
+
+画面遷移図
+
+<img width="609" src="https://user-images.githubusercontent.com/48615196/77590516-39ade600-6f31-11ea-9371-5f339c953c91.png">
+
+
+ER図
+
+<img width="434" src="https://user-images.githubusercontent.com/48615196/77590270-b4c2cc80-6f30-11ea-897a-a4fd98ffd8ab.png">
+
+
 機能一覧
 
 ユーザー
