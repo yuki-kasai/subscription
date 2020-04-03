@@ -10,10 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_22_030123) do
+ActiveRecord::Schema.define(version: 2020_04_03_005829) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "agreements", force: :cascade do |t|
+    t.integer "user_id"
+    t.string "servise_name"
+    t.integer "price"
+    t.date "start_date"
+    t.date "end_date"
+    t.date "schedule_end_date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
