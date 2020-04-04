@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  root to: 'agreements#index'
+  resources :agreements
+
   devise_for :users, :controllers => {
     :registrations => 'users/registrations',
     :sessions => 'users/sessions'
