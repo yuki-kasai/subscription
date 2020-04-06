@@ -1,5 +1,6 @@
 class AgreementsController < ApplicationController
   def index
+    @agreement = Agreement.new
   end
 
   def show

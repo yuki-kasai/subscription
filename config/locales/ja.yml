@@ -140,3 +140,15 @@ ja:
       not_saved:
         one: エラーが発生したため %{resource} は保存されませんでした。
         other: "%{count} 件のエラーが発生したため %{resource} は保存されませんでした。"
+  modles:
+    agreement: 契約
+  attributes:
+    agreement:
+      id: ID
+      user_id: ユーザーID
+      servise_name: サービス名
+      price: 金額
+      start_date: 契約開始日
+      end_date: 契約終了日
+      schedule_end_date: 契約終了予定日
+      schedule_end_date: 契約予定期間

@@ -4,12 +4,8 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>サンプルサイト</title>
-
 </head>
 <body style="padding-top:none;">
-  <div class="container"> <!-- 全体を囲むコンテナ -->
-
     <!-- ここからナビの記述が始まります -->
 
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark mt-3 mb-3">
@@ -31,158 +27,51 @@
                 </ul>
             </div>
         </nav>
-
+<div class="container"> <!-- 全体を囲むコンテナ -->
     <!-- ここまでナビの記述がです -->
-<div class="text-center">
+  <!-- <a class="btn btn-primary btn-lg" href="agreements/new" role="button">新規登録</a> -->
+  <a class="btn btn-primary btn-lg" href=agreements/new role="button">新規登録</a>
+  <div class="container">
+    <div class="text-center">
+      <div class="table-responsive">
+        <table class="table table-hover text-nowrap">
+          <thead>
+            <tr>
+              <th scope="col">編集</th>
+              <th scope="col">契約日</th>
+              <th scope="col">契約解除予定日</th>
+              <th scope="col">サービス名</th>
+              <th scope="col">金額</th>
+              <th scope="col">削除</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th><a class="btn btn-primary btn-sm" href="#" role="button" >編集</a></th>
+              <th scope="row">1</th>
+              <td>情報 太郎</td>
+              <td>taro.joho@example.com</td>
+              <td>000-1111-2222</td>
+              <th><a class="btn btn-danger btn-sm" href="#" role="button">削除</a></th>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>情報 花子</td>
+              <td>hanako.joho@example.com</td>
+              <td>000-3333-4444</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td>情報 次郎</td>
+              <td>jiro.joho@example.com</td>
+              <td>000-5555-6666</td>
+            </tr>
+          </tbody>
+        </table>
 
-  <table class="table">
-    <thead>
-      <tr>
-        <th scope="col">No</th>
-        <th scope="col">名前</th>
-        <th scope="col">Eメールアドレス</th>
-        <th scope="col">電話番号</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>情報 太郎</td>
-        <td>taro.joho@example.com</td>
-        <td>000-1111-2222</td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>情報 花子</td>
-        <td>hanako.joho@example.com</td>
-        <td>000-3333-4444</td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td>情報 次郎</td>
-        <td>jiro.joho@example.com</td>
-        <td>000-5555-6666</td>
-      </tr>
-    </tbody>
-  </table>
-
+      </div>
+    </div>
+  </div>
 </div>
-
-    <div class="row" style="margin-top:50px;"> <!-- サムネール -->
-
-      <div class="col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-0">
-        <div class="thumbnail">
-          <img src="https://s3-ap-northeast-1.amazonaws.com/codecamp-textimage/bootstrap/img05.png" class="img-responsive">
-          <div class="caption">
-            <h2>清水寺</h2>
-            <p>「清水の舞台」で知られる寺院。舞台の高さは約18メートルあり、京都市内が一望できる。</p>
-
-            <button class="btn btn-primary center-block" data-toggle="modal" data-target="#kiyomizu"> <!-- モーダル -->
-              清水寺の詳細を見る
-            </button>
-            <div class="modal fade" id="kiyomizu">
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <button class="close" data-dismiss="modal">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                    <h4 class="modal-title">清水寺</h4>
-                  </div>
-                  <div class="modal-body">
-                    開創は宝亀9年（778）奈良時代の末である。<br>
-                    山号は音羽山といい、宗派は北法相宗である。<br><br>
-                    「古都京都の文化財」のひとつとして平成6年（1994）にユネスコ世界文化遺産登録された。<br><br>
-                  </div>
-                  <div class="modal-footer">
-                    <p>京の音.com</p>
-                    <button class="btn btn-primary btn-sm" data-dismiss="modal">閉じる</button>
-                  </div>
-                </div>
-              </div>
-            </div> <!-- モーダル -->
-
-          </div>
-        </div>
-      </div>
-
-      <div class="col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-0">
-        <div class="thumbnail">
-          <img src="https://s3-ap-northeast-1.amazonaws.com/codecamp-textimage/bootstrap/img06.png" class="img-responsive">
-          <div class="caption">
-            <h2>金閣寺</h2>
-            <p>相国寺の塔頭寺院の一つで、正式名称を「鹿苑寺」という。「金閣」が有名である。</p>
-
-            <button class="btn btn-primary center-block" data-toggle="modal" data-target="#kinkakuji"> <!-- モーダル -->
-              金閣寺の詳細を見る
-            </button>
-            <div class="modal fade" id="kinkakuji">
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <button class="close" data-dismiss="modal">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                    <h4 class="modal-title">金閣寺</h4>
-                  </div>
-                  <div class="modal-body">
-                    正式名称を鹿苑寺といい、<br>
-                    相国寺の塔頭寺院の一つである。<br><br>
-                    舎利殿の「金閣」がとても有名で<br>
-                    「金閣寺」と呼ばれている。
-                  </div>
-                  <div class="modal-footer">
-                    <p>京の音.com</p>
-                    <button class="btn btn-primary btn-sm" data-dismiss="modal">閉じる</button>
-                  </div>
-                </div>
-              </div>
-            </div> <!-- モーダル -->
-
-          </div>
-        </div>
-      </div>
-
-      <div class="col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-0">
-        <div class="thumbnail">
-          <img src="https://s3-ap-northeast-1.amazonaws.com/codecamp-textimage/bootstrap/img07.png" class="img-responsive">
-          <div class="caption">
-            <h2>伏見稲荷大社</h2>
-            <p>全国に約3万社ある稲荷神社の総本社である。数多くの鳥居があることで知られている。</p>
-
-            <button class="btn btn-primary center-block" data-toggle="modal" data-target="#inari"> <!-- モーダル -->
-              伏見稲荷大社の詳細を見る
-            </button>
-            <div class="modal fade" id="inari">
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <button class="close" data-dismiss="modal">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                    <h4 class="modal-title">伏見稲荷大社</h4>
-                  </div>
-                  <div class="modal-body">
-                    伏見稲荷大社とは全国に約3万社ある<br>
-                    稲荷神社の総本社である。<br><br>
-                    参道には約1万もの鳥居があり、<br>
-                    多くの観光客で賑わっている。
-                  </div>
-                  <div class="modal-footer">
-                    <p>京の音.com</p>
-                    <button class="btn btn-primary btn-sm" data-dismiss="modal">閉じる</button>
-                  </div>
-                </div>
-              </div>
-            </div> <!-- モーダル -->
-
-          </div>
-        </div>
-      </div>
-
-    </div> <!-- サムネール -->
-
-  </div> <!-- 全体を囲むコンテナ -->
-
 </body>
 </html>
