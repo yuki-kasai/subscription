@@ -1,0 +1,13 @@
+- if @agreement.errors.present?
+  ul#error_explanation
+    - agreement.errors.full_messages.each do |message|
+      li = message
+
+= form_with model: @agreement, local: true do |f|
+  .form-group
+    = f.label :servicename
+    = f.text_field :servicename, class: 'form-control', id: 'agreement_servicename'
+  .form-group
+    = f.label :price
+    = f.text_field :price, class: 'form-control', id: 'agreement_price'
+  = f.submit nil, class: 'btn btn-primary'

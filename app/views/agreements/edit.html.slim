@@ -1,0 +1,6 @@
+h1 サービスの編集
+
+.nav.justify-content-end
+  = link_to '一覧', agreements_path, class: 'nav_link'
+
+= render partial: 'form', locals: { agreement: @agreement }
