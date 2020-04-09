@@ -1,2 +1,18 @@
 h1 サービス一覧(月額)
 = link_to '新規登録', new_agreement_path, class: 'btn btn-primary'
+
+.mb-3
+table.table.table-hover
+  thead.thead-default
+    tr
+      th
+      th= Agreement.human_attribute_name(:service_name)
+      th= Agreement.human_attribute_name(:price)
+      th
+  tbody
+    - @agreements.each do |agreement|
+      tr
+
+        td= link_to '編集', edit_agreement_path(agreement), class: 'btn btn-primary mr-3'
+        td= agreement.servise_name
+        td= agreement.price

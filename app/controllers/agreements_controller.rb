@@ -1,6 +1,6 @@
 class AgreementsController < ApplicationController
   def index
-    @agreement = Agreement.new
+    @agreements = Agreement.all
   end
 
   def show
