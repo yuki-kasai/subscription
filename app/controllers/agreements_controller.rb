@@ -17,6 +17,13 @@ class AgreementsController < ApplicationController
   end
 
   def edit
+    @agreement = Agreement.find(params[:id])
+  end
+
+  def update
+    agreement = Agreement.find(params[:id])
+    agreement.update!(agreement_params)
+    redirect_to agreements_url, notice: "タスク「#{agreement.servise_name}」を更新しました。"
   end
 
   private

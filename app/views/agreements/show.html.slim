@@ -1,4 +1,25 @@
-h1
-  | Agreements#show
-p
-  | Find me in app/views/agreements/show.html.erb
+h1 サービス詳細
+
+.nav.justify-content-end
+  = link_to '一覧', agreements_path, class: 'nav-link'
+
+table.table.table-hover
+  tbody
+    tr
+      th= Month.human_attribute_name(:id)
+      td= @agreement.id
+    tr
+      th= Month.human_attribute_name(:service_name)
+      td= @agreement.servicename
+    tr
+      th= Month.human_attribute_name(:price)
+      td= @agreement.price
+    tr
+      th= Month.human_attribute_name(:created_at)
+      td= @agreement.created_at.strftime("%Y-%m-%d %H:%M:%S")
+    tr
+      th= Month.human_attribute_name(:updated_at)
+      td= @agreement.updated_at.strftime("%Y-%m-%d %H:%M:%S")
+
+= link_to '編集', edit_agreement_path, class: 'btn btn-primary mr-3'
+= link_to '削除',@agreement ,method: :delete, data: { confirm: "サービス「#{@agreement.service_name}」を削除します。よろしいですか？"}, class: 'btn btn-danger'
