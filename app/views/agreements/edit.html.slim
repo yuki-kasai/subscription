@@ -3,11 +3,4 @@ h1 サービスの編集
 .nav.justify-content-end
   = link_to '一覧', agreements_path, class: 'nav_link'
 
-= form_with model: @agreement, local: true do |f|
-  .form-group
-    = f.label :servise_name
-    = f.text_field :servise_name, class: 'form-control', id: 'agreement_servise_name'
-  .form-group
-    = f.label :price
-    = f.text_field :price, class: 'form-control', id: 'agreement_price'
-  = f.submit nil, class: 'btn btn-primary'
+= render partial: 'form', locals: { agreement: @agreement }

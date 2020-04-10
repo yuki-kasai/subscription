@@ -6,19 +6,19 @@ h1 サービス詳細
 table.table.table-hover
   tbody
     tr
-      th= Month.human_attribute_name(:id)
+      th= Agreement.human_attribute_name(:id)
       td= @agreement.id
     tr
-      th= Month.human_attribute_name(:service_name)
+      th= Agreement.human_attribute_name(:service_name)
       td= @agreement.servicename
     tr
-      th= Month.human_attribute_name(:price)
+      th= Agreement.human_attribute_name(:price)
       td= @agreement.price
     tr
-      th= Month.human_attribute_name(:created_at)
+      th= Agreement.human_attribute_name(:created_at)
       td= @agreement.created_at.strftime("%Y-%m-%d %H:%M:%S")
     tr
-      th= Month.human_attribute_name(:updated_at)
+      th= Agreement.human_attribute_name(:updated_at)
       td= @agreement.updated_at.strftime("%Y-%m-%d %H:%M:%S")
 
 = link_to '編集', edit_agreement_path, class: 'btn btn-primary mr-3'

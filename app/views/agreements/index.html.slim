@@ -1,4 +1,4 @@
-h1 サービス一覧(月額)
+h1 管理一覧ページ
 = link_to '新規登録', new_agreement_path, class: 'btn btn-primary'
 
 .mb-3
@@ -12,7 +12,7 @@ table.table.table-hover
   tbody
     - @agreements.each do |agreement|
       tr
-
         td= link_to '編集', edit_agreement_path(agreement), class: 'btn btn-primary mr-3'
         td= agreement.servise_name
         td= agreement.price
+        td= link_to '削除', agreement, method: :delete, data: { confirm: "「#{ agreement.servise_name }」を削除します。よろしいですか？"}, class: 'btn btn-danger'

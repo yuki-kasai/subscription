@@ -3,10 +3,10 @@
     - agreement.errors.full_messages.each do |message|
       li = message
 
-= form_with model: @agreement, local: true do |f|
+= form_with model: agreement, local: true do |f|
   .form-group
-    = f.label :servicename
-    = f.text_field :servicename, class: 'form-control', id: 'agreement_servicename'
+    = f.label :servise_name
+    = f.text_field :servise_name, class: 'form-control', id: 'agreement_servise_name'
   .form-group
     = f.label :price
     = f.text_field :price, class: 'form-control', id: 'agreement_price'
