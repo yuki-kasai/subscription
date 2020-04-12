@@ -47,6 +47,10 @@ gem 'html2slim'
 
 gem 'kaminari'
 
+gem 'pry-rails'
+gem 'pry-byebug'
+gem 'pry-doc'
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
