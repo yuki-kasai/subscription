@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 2020_04_03_005829) do
 
   create_table "agreements", force: :cascade do |t|
     t.integer "user_id"
-    t.string "servise_name"
+    t.string "service_name"
     t.integer "price"
     t.date "start_date"
     t.date "end_date"

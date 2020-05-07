@@ -146,7 +146,7 @@ ja:
     agreement:
       id: ID
       user_id: ユーザーID
-      servise_name: サービス名
+      service_name: サービス名
       price: 金額
       start_date: 契約開始日
       end_date: 契約終了日

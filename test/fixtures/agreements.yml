@@ -1,21 +1,21 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  id: 
-  user_id: 
-  servise_name: MyString
+  id:
+  user_id:
+  service_name: MyString
   price: 1
-  start_date: 
-  end_date: 
-  schedule_end_date: 
-  schedule_end_date: 
+  start_date:
+  end_date:
+  schedule_end_date:
+  schedule_end_date:
 
 two:
-  id: 
-  user_id: 
-  servise_name: MyString
+  id:
+  user_id:
+  service_name: MyString
   price: 1
-  start_date: 
-  end_date: 
-  schedule_end_date: 
-  schedule_end_date: 
+  start_date:
+  end_date:
+  schedule_end_date:
+  schedule_end_date:
