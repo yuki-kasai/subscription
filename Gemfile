@@ -46,6 +46,7 @@ gem 'slim-rails'
 gem 'html2slim'
 
 gem 'kaminari'
+gem 'ransack'
 
 gem 'pry-rails'
 gem 'pry-byebug'

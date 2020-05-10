@@ -1,5 +1,10 @@
 h1 管理一覧ページ
-= link_to '新規登録', new_agreement_path, class: 'btn btn-primary'
+
+= search_form_for @q do |f|
+  p
+    = f.label :service_name_cont, 'サービス名'
+    = f.search_field :service_name_cont
+  = f.submit
 
 ul.pagination.float-right
   = paginate @agreements

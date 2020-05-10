@@ -2,8 +2,8 @@ class AgreementsController < ApplicationController
   # before_action :set_agreement, only: [:show, :edit, :update, :destroy]
 
   def index
-    @agreements = Agreement.all.order(created_at: :desc)
-    @agreements = Agreement.page(params[:page]).per(5)
+    @q = Agreement.ransack(params[:q])
+    @agreements = @q.result(distinct: true).order(service_name: :asc).page(params[:page]).per(5)
   end
 
   def show
