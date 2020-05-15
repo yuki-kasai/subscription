@@ -9,8 +9,8 @@ window.draw_graph = ->
         data: {
             labels: ["1月", "2月", "3月", "4月", "5月", "6月", "7月", "8月", "9月", "10月", "11月","12月"],
             datasets: [{
-                label: 'Service',
-                data: [12, 19, 3, 5, 2, 3, 19, 3, 5, 2, 3, 20],
+                label: '月額利用料',
+                data: gon.data,
                 backgroundColor: [
                     'rgba(255, 99, 132, 0.2)',
                     'rgba(54, 162, 235, 0.2)',

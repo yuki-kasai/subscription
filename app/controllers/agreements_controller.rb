@@ -4,6 +4,10 @@ class AgreementsController < ApplicationController
   def index
     @q = Agreement.ransack(params[:q])
     @agreements = @q.result(distinct: true).order(service_name: :asc).page(params[:page]).per(5)
+    gon.data = []
+    12.times do
+      gon.data << Agreement.all.sum(:price)
+    end
   end
 
   def show
@@ -25,13 +29,13 @@ class AgreementsController < ApplicationController
   end
 
   def update
+    @agreement = Agreement.find(params[:id])
     @agreement.update!(agreement_params)
     redirect_to agreements_url, notice: "タスク「#{@agreement.service_name}」を更新しました。"
   end
 
   def destroy
     agreement = Agreement.find(params[:id])
-    # binding.pry
     agreement.destroy
     redirect_to agreements_url, notice: "サービス「#{agreement.service_name}」を削除しました。"
   end
