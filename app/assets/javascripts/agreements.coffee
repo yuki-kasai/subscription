@@ -4,13 +4,21 @@
 
 window.draw_graph = ->
     ctx = document.getElementById("myChart").getContext('2d')
+    barNum = 13
+    labels = new Array(barNum)
+    bgColors = new Array(barNum)
+    bdColors = new Array(barNum)
+    for i in [1...barNum]
+        labels[i] =  i + '月'
+        bgColors[i] = 'rgba(75, 192, 192, 0.2)'
+        bdColors[i] = 'rgba(75, 192, 192, 1)'
     myChart = new Chart(ctx, {
         type: 'line',
         data: {
-            labels: ["1月", "2月", "3月", "4月", "5月", "6月", "7月", "8月", "9月", "10月", "11月","12月"],
+            labels: labels,
             datasets: [{
                 label: '月額利用料',
-                data: [gon.data],
+                data: gon.linedata,
                 backgroundColor: [
                     'rgba(255, 99, 132, 0.2)',
                     'rgba(54, 162, 235, 0.2)',
