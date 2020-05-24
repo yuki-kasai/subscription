@@ -11,13 +11,10 @@ class AgreementsController < ApplicationController
     gon.data = []
     first_month = 0
 
-    Agreement.where(created_at: this_month).each do |a|
+    Agreement.all.each do |a|
       target_month = a.created_at.strftime("%m")
       target_month = target_month.to_i
-      sum = sum + a.price
-      gon.data[target_month - 1] = sum
-      gon.data[target_month] = Agreement.sum(:price)
-
+      gon.data[target_month - 1] = gon.data[target_month - 1].to_i + a.price
       first_month = [first_month, target_month].min
     end
   end

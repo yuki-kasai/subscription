@@ -4,6 +4,14 @@ javascript:
   draw_graph();
 
 .mb-3
+  = search_form_for @q do |f|
+    p
+      = f.label :service_name_cont, 'サービス名'
+      = f.search_field :service_name_cont
+    = f.submit '検索',class: 'btn btn-primary btn-lg'
+
+
+.mb-3
   = link_to '新規登録', new_agreement_path, class: 'btn btn-primary'
 
 ul.pagination.float-right

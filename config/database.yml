@@ -83,3 +83,7 @@ production:
   database: subscription_production
   username: subscription
   password: <%= ENV['SUBSCRIPTION_DATABASE_PASSWORD'] %>
+  
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
