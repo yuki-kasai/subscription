@@ -48,7 +48,7 @@ gem 'html2slim'
 gem 'kaminari'
 gem 'ransack'
 gem 'chart-js-rails', '~> 0.1.4'
-gem 'gon', '~> 6.2.0'
+gem 'gon', '~> 6.4.0'
 
 gem 'pry-rails'
 gem 'pry-byebug'
